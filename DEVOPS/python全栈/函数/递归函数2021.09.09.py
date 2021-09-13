@@ -5,4 +5,15 @@ def popsort(data):
             if data[i]>data[i+1]:
                 data[i],data[i+1] = data[i+1],data[i]
     return data
-print(popsort([2,5,12,2,14,16,18,15,15,61,31]))
+print(popsort([2,5,14,16,18,15,15,61,31]))
+'''
+函数在内部不调用其他函数，而是调用自身
+'''
+print(12)
+
+import  re
+text = '/dev/dadaasashks/all'
+res = re.sub(r'/dev','+',text)
+print(res)
+        
+
