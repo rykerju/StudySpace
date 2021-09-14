@@ -15,6 +15,6 @@ import  re
 text = '/dev/dadaasashks/all'
 res = re.sub(r'/dev','+',text)
 print(res)
-        
+
 
 
