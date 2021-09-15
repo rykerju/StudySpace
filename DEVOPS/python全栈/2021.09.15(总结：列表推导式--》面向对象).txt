@@ -1,0 +1,33 @@
+回顾
+
+列表推导式
+[表达式 for 变量 in 列表]
+1、[表达式 for 变量 in 列表 if 条件]
+    [x+2 for x in list1 if x%2 == 0]
+2、[结果 a if 条件 else 结果 b for x in list1]
+    [x+2 if x%2==0 else x+1 for x in list1]
+
+集合推导式：类似列表推导式，但是没有重合元素
+
+字典推导式：{key,value for k,v in 字典.items}
+
+生成器：generator
+1、使用类似列表推导式，但是返回的是一个生成器，可以使用next（）函数
+g = (表达式 for 变量 in 列表)
+2、使用函数+yield
+def func():
+    ...
+    yield
+    ...
+g = func()
+得到里面的内容next()
+
+可迭代的和迭代器：
+1、生成器 2、字符串，列表，元组
+判断isinstance(x,Iterable)
+
+类
+class 类名：
+    特征：属性
+    动作：方法
+实例，对象
