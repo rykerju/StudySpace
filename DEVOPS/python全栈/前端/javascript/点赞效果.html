@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript学习</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        .container {
+            width: 980px;
+            margin: 0 auto;
+        }
+        .item {
+            height: 120px;
+            border: 1px solid #dddddd;
+            margin-top: 20px;
+            padding: 10px;
+        }
+        .item .title {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .item img {
+            width: 60px;
+            height: 60px;
+        }
+        .item .favor {
+            position: relative;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="item">
+        <div class="title">震惊了...</div>
+        <img src="https://images.cnblogs.com/cnblogs_com/wupeiqi/662608/o_20130809170025.png" alt="">
+        <div class="favor" onclick="doFavor(this);">赞</div>
+    </div>
+    <div class="item">
+        <div class="title">冷酷无情，无理取闹...</div>
+        <img src="https://images.cnblogs.com/cnblogs_com/wupeiqi/662608/o_20130809170025.png" alt="">
+        <div class="favor" onclick="doFavor(this);">赞</div>
+    </div>
+</div>
+<script type="text/javascript">
+    function doFavor(self) {
+        var plusTag = document.createElement('span');
+        var fontSize = 10;
+        var marginLeft = 10;
+        var marginTop = 10;
+        var opacity = 1;
+        plusTag.innerText = "+1";
+        plusTag.style.color = 'green';
+        plusTag.style.position = 'absolute';
+        plusTag.style.fontSize = fontSize + 'px';
+        plusTag.style.marginLeft = marginLeft + 'px';
+        plusTag.style.marginTop = marginTop + 'px';
+        plusTag.style.opacity = opacity;
+        self.appendChild(plusTag);
+        var interval = setInterval(function () {
+            fontSize += 5;
+            marginLeft += 5;
+            marginTop -= 5;
+            opacity -= 0.2;
+            plusTag.style.fontSize = fontSize + 'px';
+            plusTag.style.marginLeft = marginLeft + 'px';
+            plusTag.style.marginTop = marginTop + 'px';
+            plusTag.style.opacity = opacity;
+            if (opacity <= 0) {
+                self.removeChild(plusTag);
+                clearInterval(interval);
+            }
+        }, 100)
+    }
+</script>
+</body>
+</html>

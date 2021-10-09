@@ -1,0 +1,53 @@
+1、===表示类型和值都相等
+2、setInterval（“函数；”，时间（毫秒））表示没过一段时间就会执行的命令
+3、数据类型
+-字符串
+--常用方法
+    var name = "wupeiqi";
+    var value = names[0]                    // 索引
+    var value = name.length                 // 获取字符串长度
+    var value = name.trim()                 // 去除空白
+    var value = name.charAt(index)          // 根据索引获取字符
+    var value = name.substring(start,end)   // 根据索引获取子序列
+-数组
+-- 常见方法
+    var names = ['武沛齐', '肖峰', '于超']
+    names[0]                        // 索引
+    names.push(ele)                 // 尾部追加元素
+    var ele = names.obj.pop()       // 尾部移除一个元素
+    names.unshift(ele)              // 头部插入元素
+    var ele = obj.shift()           // 头部移除一个元素
+    names.splice(index,0,ele)       // 在指定索引位置插入元素
+    names.splice(index,1,ele)       // 指定索引位置替换元素
+    names.splice(index,1)           // 指定位置删除元素
+    names.slice(start,end)          // 切片
+    names.reverse()                 // 原数组反转
+    names.join(sep)                 // 将数组元素连接起来以构建一个字符串
+    names.concat(val,..)            // 连接数组
+    names.sort()                    // 对原数组进行排序
+4、两种for循环
+-for(i=0;i<10;i++){
+}
+-for(var item in li){
+
+}
+5、DOM选择器
+-直接查找
+    document.getElementById(arg)             // 根据ID获取一个标签对象
+    document.getElementsByClassName(arg)     // 根据class属性获取标签对象集合
+    document.getElementsByName(arg)       // 根据name属性值获取标签对象集合
+    document.getElementsByTagName(arg)       // 根据标签名获取标签对象集合
+-间接查找
+    var tag = document.getElementById(arg);
+    tag.parentElement           // 找当前标签对象的父标签对象
+    tag.children                // 找当前标签对象的所有子标签对象
+    tag.firstElementChild       // 找当前标签对象的第一个子标签对象
+    tag.lastElementChild        // 找当前标签对象最后一个子标签对象
+    tag.nextElementtSibling     // 找当前标签对象下一个兄弟标签对象
+    tag.previousElementSibling  // 找当前标签对象上一个兄弟标签对象
+6、事件
+    onclick，单击时触发事件
+    ondblclick，双击触发事件
+    onchange，内容修改时触发事件
+    onfocus，获取焦点时触发事件
+    onblur，失去焦点触发事件

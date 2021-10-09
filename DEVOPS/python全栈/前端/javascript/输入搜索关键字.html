@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'/>
+    <title>DOM</title>
+    <style>
+        .gray {
+            color: gray;
+        }
+        .black {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+<input type='text' class='gray' value='请输入关键字' onfocus='getFocus(this);' onblur='leave(this);'/>
+<script type="text/javascript">
+    function getFocus(self) {
+        self.className = 'black';
+        if (self.value === '请输入关键字' || self.value.trim().length === 0) {
+            self.value = '';
+        }
+    }
+    function leave(self) {
+        if (self.value.length === 0) {
+            self.value = '请输入关键字';
+            self.className = 'gray';
+        } else {
+            self.className = 'black';
+        }
+    }
+</script>
+</body>
+</html>

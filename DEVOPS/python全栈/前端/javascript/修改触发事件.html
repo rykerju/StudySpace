@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'/>
+    <title>DOM学习</title>
+</head>
+<body>
+<select id="city" onchange="changeEvent(this);">
+    <option value="10">普通青年</option>
+    <option value="20">文艺青年</option>
+    <option value="30">二逼青年</option>
+</select>
+<script type="text/javascript">
+    function changeEvent(self) {
+        console.log(self.value);
+    }
+</script>
+</body>
+</html>

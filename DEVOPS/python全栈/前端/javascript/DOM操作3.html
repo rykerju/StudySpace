@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript学习</title>
+</head>
+<body>
+<h1>文章</h1>
+<textarea id="article" cols="30" rows="10">从前有座山，山里有座庙。</textarea>
+<input type="button" onclick="showArticle();" value="点击获取"/>
+<input type="button" onclick="setArticle();" value="点击设置"/>
+<script type="text/javascript">
+    function showArticle() {
+        // 获取textarea的值
+        console.log(document.getElementById('article').value);
+    }
+    function setArticle() {
+        // 设置textarea的值
+        document.getElementById('article').value = "秃驴";
+    }
+</script>
+</body>
+</html>

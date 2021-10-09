@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript学习</title>
+    <style>
+        table {
+            /*边框合并*/
+            border-collapse: collapse;
+        }
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        table th {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <input type="button" value="全选" onclick="checkAll();"/>
+    <input type="button" value="取消" onclick="cancelAll();"/>
+    <input type="button" value="反选" onclick="reverseCheck();"/>
+</div>
+<table>
+    <thead>
+    <tr>
+        <th>选择</th>
+        <th>姓名</th>
+        <th>性别</th>
+    </tr>
+    </thead>
+    <tbody id="tableBody">
+    <tr>
+        <td><input type="checkbox" value="1"/></td>
+        <td>郭德纲</td>
+        <td>男</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" value="2"/></td>
+        <td>于谦</td>
+        <td>女</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" value="2"/></td>
+        <td>烧饼</td>
+        <td>男</td>
+    </tr>
+    </tbody>
+</table>
+<script type="text/javascript">
+    /* 全选 */
+    function checkAll() {
+        var trTagList = document.getElementById('tableBody').children;
+        for (var i = 0; i < trTagList.length; i++) {
+            var trTag = trTagList[i];
+            var inputTag = trTagList[i].firstElementChild.firstElementChild;
+            inputTag.checked = true;
+        }
+    }
+    /* 取消 */
+    function cancelAll() {
+        var trTagList = document.getElementById('tableBody').children;
+        for (var i = 0; i < trTagList.length; i++) {
+            var trTag = trTagList[i];
+            var inputTag = trTagList[i].firstElementChild.firstElementChild;
+            inputTag.checked = false;
+        }
+    }
+    /* 取消 */
+    function reverseCheck() {
+        var trTagList = document.getElementById('tableBody').children;
+        for (var i = 0; i < trTagList.length; i++) {
+            var trTag = trTagList[i];
+            var inputTag = trTagList[i].firstElementChild.firstElementChild;
+            // inputTag.checked = ! inputTag.checked;
+            inputTag.checked = inputTag.checked ? false : true;
+        }
+    }
+</script>
+</body>
+</html>

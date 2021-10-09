@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript学习</title>
+    <style>
+        table {
+            /*边框合并*/
+            border-collapse: collapse;
+        }
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        table th {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>网站</th>
+        <th>介绍</th>
+        <th>读取</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>1</td>
+        <td>
+            <a href="http://www.baidu.com">百度</a>
+        </td>
+        <td>百度是一个流氓网站。</td>
+        <td>
+            <input type="button" value="读取网站innerText" onclick="readSite(this)">
+            <input type="button" value="读取网站innerHTML" onclick="readSummary(this)">
+        </td>
+    </tr>
+    </tbody>
+</table>
+<script type="text/javascript">
+    function readSite(self) {
+        var tdTag = self.parentElement.previousElementSibling;
+        console.log(tdTag.innerText);
+    }
+    function readSummary(self) {
+        var tdTag = self.parentElement.previousElementSibling.previousElementSibling;
+        console.log(tdTag.innerHTML);
+    }
+</script>
+</body>
+</html>

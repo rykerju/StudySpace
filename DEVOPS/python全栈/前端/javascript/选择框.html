@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript学习</title>
+</head>
+<body>
+<h1>城市</h1>
+<select id="city">
+    <option value="10">上海</option>
+    <option value="20">北京</option>
+    <option value="30">深圳</option>
+</select>
+<input type="button" onclick="showCity();" value="点击获取选择"/>
+<input type="button" onclick="setCity();" value="点击设置"/>
+<script type="text/javascript">
+    function showCity() {
+        // 获取select下拉框选中项的值
+        var cityTag = document.getElementById('city');
+        console.log(cityTag.value);
+    }
+    function setCity() {
+        // 设置select下拉框选中项的值，让select去选中。
+        document.getElementById('city').value = "30";
+    }
+</script>
+</body>
+</html>

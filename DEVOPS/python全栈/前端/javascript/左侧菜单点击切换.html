@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS学习</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        .header {
+            height: 48px;
+            background-color: #499ef3;
+        }
+        .body .menu {
+            position: fixed;
+            top: 48px;
+            left: 0;
+            bottom: 0;
+            width: 220px;
+            border-right: 1px solid #dddddd;
+            overflow: scroll;
+        }
+        .body .content {
+            position: fixed;
+            top: 48px;
+            right: 0;
+            bottom: 0;
+            left: 225px;
+            /* 超出范围的话，出现滚轮 */
+            overflow: scroll;
+        }
+        .body .menu .title {
+            padding: 8px;
+            border-bottom: 1px solid #dddddd;
+            background-color: #5f4687;
+            color: white;
+        }
+        .body .menu .child {
+            border-bottom: 1px solid #dddddd;
+        }
+        .body .menu .child a {
+            display: block;
+            padding: 5px 10px;
+            color: black;
+            text-decoration: none;
+        }
+        .body .menu .child a:hover {
+            background-color: #dddddd;
+        }
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="header"></div>
+<div class="body">
+    <div class="menu">
+        <div class="item">
+            <div class="title" onclick="showMenu(this);">国产</div>
+            <div class="child">
+                <a href="#">少年的你</a>
+                <a href="#">我不是药神</a>
+                <a href="#">我和我的祖国</a>
+            </div>
+        </div>
+        <div class="item">
+            <div class="title" onclick="showMenu(this);">欧美</div>
+            <div class="child hide ">
+                <a href="#">战争之王</a>
+                <a href="#">华尔街之狼</a>
+                <a href="#">聚焦</a>
+            </div>
+        </div>
+        <div class="item">
+            <div class="title" onclick="showMenu(this);">韩国</div>
+            <div class="child hide">
+                <a href="#">坏家伙们</a>
+                <a href="#">寄生虫</a>
+                <a href="#">燃烧</a>
+            </div>
+        </div>
+    </div>
+    <div class="content"></div>
+</div>
+<script type="text/javascript">
+    function showMenu(self) {
+        var childList = document.getElementsByClassName('child');
+        for (var i = 0; i < childList.length; i++) {
+            childList[i].classList.add('hide');
+        }
+        self.nextElementSibling.classList.remove('hide');
+    }
+</script>
+</body>
+</html>

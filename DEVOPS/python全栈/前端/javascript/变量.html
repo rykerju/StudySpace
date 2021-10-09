@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="i1" style="display: inline-block;background-color: aquamarine;color: black;" >
+    欢迎光临这个地方
+</div>
+<script>
+    setInterval("f1();",1000);
+    function f1() {
+        //js获取某个标签
+        var tag = document.getElementById('i1');
+        //获取标签的内容
+        var text = tag.innerText;
+        var text1 = text.charAt(0);
+        var last = text.substring(1, text.length);
+        var new_str = last+text1;
+        tag.innerText = new_str
+        console.log('会执行这个代码')
+    }
+
+</script>
+</body>
+</html>
