@@ -1,0 +1,54 @@
+html
+    头部：编码，title，style，link
+    身体：
+        内联
+        块级
+        --->inline-block
+        a标签：
+            target，href（url，#l1）
+        img：
+            alt=“图片” alt是为了在显示不出图片时会默认显示的
+            src 图片路径
+        iframe：（伪造ajax，上传文件）
+            src
+        input系列：
+            text
+            checkbox
+            radio 互斥
+            password
+            submit
+            reset
+            button
+
+            
+        form标签：
+            action提交url
+            method，提交方式
+            enctype
+        textarea：
+            文本框
+css
+    存在形式
+        标签属性内部
+        style块
+        文件
+        最牛的：color:red ！important  不管接下来如何重新定义color
+            都无法覆盖这个属性
+    寻找
+        标签选择器
+        class选择器
+        id选择器
+        层级选择器
+        组合选择器
+        属性选择器
+    样式
+        color，width，height
+        background
+        透明度
+            opcity：0.6
+            background：rgba（0，0，0，.6）
+        position
+            fixed
+            absolute:定义位置滚动
+
+

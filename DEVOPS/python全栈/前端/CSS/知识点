@@ -1,0 +1,48 @@
+1、应用方式
+-直接在对应的标签内插入style格式
+-将css文件用链接的形式导入文件
+tips：一般制作一个页面时可以将格式内嵌，多个页面时用css文件导入
+<style rel="stylesheet" hrep="css文件路径"></style>
+2、选择器
+-标签选择器 直接用名字
+div{
+
+}
+-id选择器 #
+#name{
+
+}
+-class选择器 .
+.classname{
+    
+}
+-属性选择器
+.head[name="body"]{
+
+}这个是找head类中name叫做body的标签
+-后代选择器
+.head ul .hat{}
+这个是找出head类下ul标签里hat类标签
+-选择器分组（多个不同标签有相同style属性）
+h1,.head,h2{}
+3、css样式种类
+--高度和宽度
+
+--display显示
+
+--float浮动
+
+--字体和颜色
+
+--文字对齐方式
+
+----text-align：left、right、center
+
+--padding内边距、margin外边距
+
+--position:
+----relative
+----absolute
+
+
+z-index表示层级关系

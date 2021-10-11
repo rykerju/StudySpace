@@ -4,7 +4,7 @@
 保存log
 系统函数open():
 '''
-stream = open(r'test.txt', mode='r', encoding='utf-8') #字符前面的r是防止路径字符串转义
+stream = open(r'test.txt', mode='r',encoding='utf-8') #字符前面的r是防止路径字符串转义
 container = stream.read(2)
 container1 = stream.read(3)
 #同一段会接着上次的内容读取

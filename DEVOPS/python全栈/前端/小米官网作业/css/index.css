@@ -1,0 +1,67 @@
+a{
+    display: inline-block;
+}
+body{
+    margin: 0;
+}
+.right{
+    float: right;
+}
+.left{
+    float: left;
+}
+.site-topbar{
+    height: 40px;
+    color: rgb(76, 76, 85);
+    background-color: rgb(39, 41, 41);
+    margin-left: 0px;
+    margin-right: 0px;
+    
+}
+.container{
+    margin-left: 200px;
+    margin-right: 200px;
+    height: 40px;
+    font-size: 18px;
+}
+.spliter{
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-top: 8px;
+    height: 40px;
+}
+.toptag{
+    display: inline-block;
+    height: 40px;
+    color: #909094;
+    line-height: 40px;
+    text-decoration: none;
+    
+    
+}
+.car-buy{
+    background-color: rgb(58, 57, 57);
+    color: rgb(206, 206, 206);
+    font-size: 18px;
+    
+    line-height: 40px;
+    height: 40px;
+    margin-left: 10px;
+}
+.login{
+    line-height: 40px;
+    height: 40px;
+    color: rgb(146, 145, 146);
+    text-decoration: none;
+}
+.second-part{
+    height: 100px;
+}
+.second-top{
+display: inline-block;
+}
+.log{
+    height: 100px;
+    width: 200px;
+    display: inline-block;
+}
